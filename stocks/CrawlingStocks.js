@@ -52,5 +52,3 @@ const filterStocks = () => {
     console.log(err);
   }
 };
-
-filterStocks();
