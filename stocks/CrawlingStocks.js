@@ -4,14 +4,17 @@ import fs from 'fs';
 
 dotenv.config();
 
-const getStockList = async () => {
+const getAllStock = async () => {
   try {
     const url = `https://financialmodelingprep.com/api/v3/symbol/available-indexes?apikey=${process.env.FMP_API_KEY}`;
     const resp = await axios.get(url);
     const stocks = resp.data;
 
-    fs.writeFileSync('allStocks.json', JSON.stringify(stocks, null, 2));
-    // const filteredStocks = stocks.filter(stock => stock.exchange === 'KSE' || stock.exchange === )
+    fs.writeFileSync(
+      'stocks/result/allStocks.json',
+      JSON.stringify(stocks, null, 2)
+    );
+
     console.log(stocks);
   } catch (err) {
     console.log(err);
@@ -31,23 +34,37 @@ const isStockToUse = (stock) => {
     return false;
   }
 
-  console.log('true: ', stock.type, ' ', stock.exchangeShortName);
   return true;
 };
 
-const filterStocks = () => {
+const filterStockToUse = () => {
   try {
-    const allStocksFile = 'stocks/allStocks.json';
+    const allStocksFile = 'stocks/result/allStocks.json';
     const jsonArray = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
 
     const filteredStocks = jsonArray.filter((stock) => isStockToUse(stock));
 
     fs.writeFileSync(
-      'filteredStocks.json',
+      '/stocks/result/filteredStocks2.json',
       JSON.stringify(filteredStocks, null, 2)
     );
 
-    console.log(filteredStocks);
+    console.log(filteredStocks.length);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const getDividendStock = async () => {
+  try {
+    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=2024-12-04&to=2024-06-04&apikey=${process.env.FMP_API_KEY}`;
+    const resp = await axios.get(url);
+    const dividendStocks = resp.data;
+
+    fs.writeFileSync(
+      'stocks/result/dividendStocks.json',
+      JSON.stringify(dividendStocks, null, 2)
+    );
   } catch (err) {
     console.log(err);
   }
