@@ -21,15 +21,18 @@ const getAllStocks = async () => {
   }
 };
 
-const getDividendStocks = async () => {
+const getDividendCalendar = async () => {
   try {
-    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=2024-12-04&to=2024-06-04&apikey=${process.env.FMP_API_KEY}`;
+    const start_date = '2024-12-01';
+    const end_date = '2024-06-04';
+
+    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=${start_date}&to=${end_date}&apikey=${process.env.FMP_API_KEY}`;
     const resp = await axios.get(url);
-    const dividendStocks = resp.data;
+    const dividendCalendar = resp.data;
 
     fs.writeFileSync(
-      'stocks/result/dividendStocks.json',
-      JSON.stringify(dividendStocks, null, 2)
+      'stocks/result/dividendCalendar.json',
+      JSON.stringify(dividendCalendar, null, 2)
     );
   } catch (err) {
     console.log(err);

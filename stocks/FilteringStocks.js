@@ -19,9 +19,9 @@ const isStockToUse = (stock) => {
 const filterStocksToUse = () => {
   try {
     const allStocksFile = 'stocks/result/allStocks.json';
-    const jsonArray = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
+    const allStocks = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
 
-    const filteredStocks = jsonArray.filter((stock) => isStockToUse(stock));
+    const filteredStocks = allStocks.filter((stock) => isStockToUse(stock));
 
     fs.writeFileSync(
       '/stocks/result/filteredStocks2.json',
@@ -34,4 +34,18 @@ const filterStocksToUse = () => {
   }
 };
 
-const filterDividendStocksToUse = async () => {};
+const filterDividendStocksToUse = async () => {
+  try {
+    const allStocksFile = 'stocks/result/allStocks.json';
+    const dividendStocksFile = 'stocks/result/dividendStocks.json';
+
+    const allStocks = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
+    const dividendStocks = JSON.parse(
+      fs.readFileSync(dividendStocksFile, 'utf8')
+    );
+
+    console.log(filteredStocks.length);
+  } catch (err) {
+    console.log(err);
+  }
+};
