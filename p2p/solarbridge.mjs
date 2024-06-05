@@ -21,28 +21,28 @@ const fetchProductDetails = async (i) => {
         }
 
         const tableData = $('div.m-t-5.c-white.f-32');
-        const annualYield = tableData.eq(0).text().trim() || "해당 영역 데이터 반환 오류 발생";
-        const investmentPeriod = tableData.eq(1).text().trim() || "해당 영역 데이터 반환 오류 발생";
-        const fundingAmount = tableData.eq(2).text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const annualYield = tableData.eq(0).text().trim() || "";
+        const investmentPeriod = tableData.eq(1).text().trim() || "";
+        const fundingAmount = tableData.eq(2).text().trim() || "";
 
         const borrowerInfoSection = $('div.border-1.p-40');
-        const borrowerInfo = borrowerInfoSection.text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const borrowerInfo = borrowerInfoSection.text().trim() || "";
 
         const productSummarySection = $('#ivqm_1_focus');
-        const productSummary = productSummarySection.text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const productSummary = productSummarySection.text().trim() || "";
 
         const businessSummarySection = $('#ivqm_2_focus');
-        const businessSummary = businessSummarySection.text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const businessSummary = businessSummarySection.text().trim().replace('사업 개요', '').replace('현장 분석', '').trim() || "";
         const businessSummaryImages = [];
         businessSummarySection.find('img').each((index, element) => {
             businessSummaryImages.push($(element).attr('src'));
         });
 
         const repaymentResourcesSection = $('#ivqm_3_focus');
-        const repaymentResources = repaymentResourcesSection.text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const repaymentResources = repaymentResourcesSection.text().trim() || "";
 
         const investorProtectionSection = $('#ivqm_4_focus');
-        const investorProtection = investorProtectionSection.text().trim() || "해당 영역 데이터 반환 오류 발생";
+        const investorProtection = investorProtectionSection.text().trim() || "";
 
         return {
             "상품명": productName,
@@ -85,7 +85,7 @@ const main = async () => {
         const csvData = fs.readFileSync('solarbridge_product_details.csv', 'utf8');
         fs.writeFileSync('solarbridge_product_details.csv', BOM + csvData, 'utf8');
 
-        console.log("모든 데이터가  파일로 저장되었습니다.");
+        console.log("모든 데이터가 파일로 저장되었습니다.");
     }
 };
 
