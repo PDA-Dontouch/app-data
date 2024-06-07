@@ -130,5 +130,4 @@ const getStockDetails = async () => {
 };
 
 // getDividendCalendar('2024-01-01', '2024-06-04');
-
-getStockDetails();
+// getStockDetails();
