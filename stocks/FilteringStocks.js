@@ -16,7 +16,7 @@ const isStockToUse = (stock) => {
   return true;
 };
 
-export const filterStocksInUsingMarket = () => {
+const filterStocksInUsingMarket = () => {
   try {
     const allStocksFile = 'stocks/result/allStocks.json';
     const allStocks = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
@@ -36,7 +36,7 @@ export const filterStocksInUsingMarket = () => {
   }
 };
 
-export const filterDividendStocks = () => {
+const filterDividendStocks = () => {
   try {
     const stocksInUsingMarketFile = 'stocks/result/stocksInUsingMarket.json';
     const dividendCalendarFile = 'stocks/result/dividendCalendar.json';
@@ -66,5 +66,26 @@ export const filterDividendStocks = () => {
   }
 };
 
+const filterStocksHaveStockCode = () => {
+  const corpsFile = 'stocks/result/used/corpCodes.json';
+
+  const corps = JSON.parse(fs.readFileSync(corpsFile, 'utf8')).result.list;
+
+  const filteredCorps = corps
+    .filter((corp) => corp.stock_code[0].trim() !== '')
+    .map((corp) => ({
+      corp_code: corp.corp_code[0],
+      corp_name: corp.corp_name[0],
+      stock_code: corp.stock_code[0],
+      modify_date: corp.modify_date[0],
+    }));
+
+  fs.writeFileSync(
+    'stocks/result/final/dartCorps.json',
+    JSON.stringify(filteredCorps, null, 2)
+  );
+};
+
 // filterStocksInUsingMarket();
-filterDividendStocks();
+// filterDividendStocks();
+// filterStocksHaveStockCode();
