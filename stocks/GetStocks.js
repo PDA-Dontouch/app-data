@@ -31,5 +31,5 @@ const getStocks = async (table) => {
   }
 };
 
-getStocks('us_stocks');
+// getStocks('us_stocks');
 connection.end();

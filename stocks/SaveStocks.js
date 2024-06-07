@@ -141,6 +141,6 @@ const saveStockDetails = (nation) => {
   }
 };
 
-saveStockDetails('us');
+// saveStockDetails('us');
 
 connection.end();

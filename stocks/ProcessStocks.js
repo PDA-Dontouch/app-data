@@ -59,4 +59,27 @@ const processStocks2 = () => {
   }
 };
 
+const processDividendCalendar = () => {
+  try {
+    const stocksFile = 'stocks/result/dividend_calendar.json';
+    const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
+
+    const filteredStocks = stocks.map((stock) => ({
+      symbol: stock.symbol,
+      date: stock.date,
+      payment_date: stock.paymentDate,
+      dividend: stock.dividend,
+    }));
+
+    fs.writeFileSync(
+      'stocks/result/final/dividend_calendar.json',
+      JSON.stringify(filteredStocks, null, 2)
+    );
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// processDividendCalendar();
+
 // processStocks2();

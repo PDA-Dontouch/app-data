@@ -28,7 +28,7 @@ const getDividendCalendar = async (start_date, end_date) => {
     const dividendCalendar = resp.data;
 
     fs.writeFileSync(
-      'stocks/result/dividendCalendar.json',
+      'stocks/result/dividend_calendar.json',
       JSON.stringify(dividendCalendar, null, 2)
     );
 
@@ -156,6 +156,6 @@ const getStockScores = async (nation) => {
   );
 };
 
-getStockScores('us');
-// getDividendCalendar('2024-01-01', '2024-06-04');
+// getStockScores('us');
+getDividendCalendar('2023-01-01', '2024-06-07');
 // getStockGrowth('us');
