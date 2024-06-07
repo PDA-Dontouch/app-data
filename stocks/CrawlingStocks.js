@@ -139,7 +139,7 @@ const getStockScores = async (nation) => {
 
       const updatedStockDetail = {
         ...stock,
-        altman_z_score: score.altmanZScor || null,
+        altman_z_score: score.altmanZScore || null,
         piotroski_score: score.piotroskiScore || null,
         market_cap: score.marketCap || null,
       };
