@@ -11,6 +11,8 @@ const connection = mysql.createConnection({
   database: process.env.STOCK_DB_DATABASE,
 });
 
+// insert symbol, name, exchange, type, corp_code
+// kr_stocks
 const saveKrStock = (stock) => {
   let corp_code = null;
   if (stock.type === 'stock') {
@@ -32,6 +34,8 @@ const saveKrStock = (stock) => {
   );
 };
 
+// insert symbol, name, exchange, type
+// us_stocks
 const saveUsStock = (stock) => {
   const usQuery = `insert into us_stocks (symbol, name, exchange, type) values (?, ?, ?, ?)`;
 
@@ -67,3 +71,37 @@ const saveStocks = async () => {
     console.log(err);
   }
 };
+
+const saveKrStockDetail = (stock) => {
+  const krQuery = `insert into kr_stocks (symbol, name, exchange, type, corp_code) values (?, ?, ?, ?, ?)`;
+
+  connection.query(
+    krQuery,
+    [stock.symbol, stock.name, stock.exchange, stock.type, corp_code],
+    (err, result) => {
+      if (err) {
+        console.error('Error inserting data:', err);
+        return;
+      }
+      console.log('Data inserted successfully:', result);
+    }
+  );
+};
+
+const saveUsStockDetail = (stock) => {
+  const usQuery = `insert into us_stocks (symbol, name, exchange, type) values (?, ?, ?, ?)`;
+
+  connection.query(
+    usQuery,
+    [stock.symbol, stock.name, stock.exchange, stock.type],
+    (err, result) => {
+      if (err) {
+        console.error('Error inserting data:', err);
+        return;
+      }
+      console.log('Data inserted successfully:', result);
+    }
+  );
+};
+
+connection.end();

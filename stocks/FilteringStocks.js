@@ -16,6 +16,7 @@ const isStockToUse = (stock) => {
   return true;
 };
 
+// filter nasdaq, nyse, ksc
 const filterStocksInUsingMarket = () => {
   try {
     const allStocksFile = 'stocks/result/allStocks.json';
@@ -36,6 +37,7 @@ const filterStocksInUsingMarket = () => {
   }
 };
 
+// filter stocks gave dividend
 const filterDividendStocks = () => {
   try {
     const stocksInUsingMarketFile = 'stocks/result/stocksInUsingMarket.json';
@@ -66,6 +68,7 @@ const filterDividendStocks = () => {
   }
 };
 
+// filtering response of dart api
 const filterStocksHaveStockCode = () => {
   const corpsFile = 'stocks/result/used/corpCodes.json';
 
