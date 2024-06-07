@@ -38,7 +38,7 @@ const getDividendCalendar = async (start_date, end_date) => {
   }
 };
 
-const getStockGrowth = async (nation) => {
+const getStockGrowths = async (nation) => {
   try {
     const stocksFile = `stocks/result/final/${nation}_stocks.json`;
     const stocksGrowthFile = `stocks/result/final/${nation}_stocks_growth.json`;
@@ -101,6 +101,8 @@ const getStockGrowth = async (nation) => {
         };
 
         stocksGrowth.push(growthToSave);
+
+        console.log('saved ', stock.symbol);
       }
     }
 
@@ -113,5 +115,47 @@ const getStockGrowth = async (nation) => {
   }
 };
 
+const getStockScores = async (nation) => {
+  const stocksFile = `stocks/result/${nation}_stock_growths.json`;
+  const stockDetailsFile = `stocks/result/final/${nation}_stock_details.json`;
+
+  const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
+  const stockDetails = JSON.parse(fs.readFileSync(stockDetailsFile, 'utf8'));
+
+  const stockSymbolsAlreadyGot = new Set(
+    stockDetails.map((stockDetail) => stockDetail.symbol)
+  );
+
+  for (const stock of stocks) {
+    if (!stockSymbolsAlreadyGot.has(stock.symbol)) {
+      const scoreUrl = `https://financialmodelingprep.com/api/v4/score?symbol=${stock.symbol}&apikey=${process.env.FMP_API_KEY}`;
+
+      const scoreResp = await axios.get(scoreUrl);
+      const score = scoreResp.data[0];
+
+      if (score == null) {
+        continue;
+      }
+
+      const updatedStockDetail = {
+        ...stock,
+        altman_z_score: score.altmanZScor || null,
+        piotroski_score: score.piotroskiScore || null,
+        market_cap: score.marketCap || null,
+      };
+
+      stockDetails.push(updatedStockDetail);
+
+      console.log('saved ', stock.symbol);
+    }
+  }
+
+  fs.writeFileSync(
+    `stocks/result/final/${nation}_stock_details.json`,
+    JSON.stringify(stockDetails, null, 2)
+  );
+};
+
+getStockScores('us');
 // getDividendCalendar('2024-01-01', '2024-06-04');
-getStockGrowth('us');
+// getStockGrowth('us');

@@ -72,12 +72,52 @@ const saveStocks = async () => {
   }
 };
 
-const saveKrStockDetail = (stock) => {
-  const krQuery = `insert into kr_stocks (symbol, name, exchange, type, corp_code) values (?, ?, ?, ?, ?)`;
+const saveStockDetail = (nation, stock) => {
+  const query = `insert into ${nation}_stock_details (
+    market_cap,
+    altman_z_score,
+    piotroski_score,
+    ten_y_revenue_growth_per_share,
+    five_y_revenue_growth_per_share,
+    three_y_revenue_growth_per_share,
+    ten_y_operating_cf_growth_per_share,
+    five_y_operating_cf_growth_per_share,
+    three_y_operating_cf_growth_per_share,
+    ten_y_net_income_growth_per_share,
+    five_y_net_income_growth_per_share,
+    three_y_net_income_growth_per_share,
+    ten_y_shareholders_equity_growth_per_share,
+    five_y_shareholders_equity_growth_per_share,
+    three_y_shareholders_equity_growth_per_share,
+    ten_y_dividend_per_share_growth_per_share,
+    five_y_dividend_per_share_growth_per_share,
+    three_y_dividend_per_share_growth_per_share,
+    symbol
+  ) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
   connection.query(
-    krQuery,
-    [stock.symbol, stock.name, stock.exchange, stock.type, corp_code],
+    query,
+    [
+      stock.market_cap,
+      stock.altman_z_score,
+      stock.piotroski_score,
+      stock.ten_y_revenue_growth_per_share,
+      stock.five_y_revenue_growth_per_share,
+      stock.three_y_revenue_growth_per_share,
+      stock.ten_y_operating_cf_growth_per_share,
+      stock.five_y_operating_cf_growth_per_share,
+      stock.three_y_operating_cf_growth_per_share,
+      stock.ten_y_net_income_growth_per_share,
+      stock.five_y_net_income_growth_per_share,
+      stock.three_y_net_income_growth_per_share,
+      stock.ten_y_shareholders_equity_growth_per_share,
+      stock.five_y_shareholders_equity_growth_per_share,
+      stock.three_y_shareholders_equity_growth_per_share,
+      stock.ten_y_dividend_per_share_growth_per_share,
+      stock.five_y_dividend_per_share_growth_per_share,
+      stock.three_y_dividend_per_share_growth_per_share,
+      stock.symbol,
+    ],
     (err, result) => {
       if (err) {
         console.error('Error inserting data:', err);
@@ -88,20 +128,18 @@ const saveKrStockDetail = (stock) => {
   );
 };
 
-const saveUsStockDetail = (stock) => {
-  const usQuery = `insert into us_stocks (symbol, name, exchange, type) values (?, ?, ?, ?)`;
+const saveStockDetails = (nation) => {
+  try {
+    const stockDetailsFile = `stocks/result/final/${nation}_stock_details.json`;
+    const stockDetails = JSON.parse(fs.readFileSync(stockDetailsFile, 'utf8'));
 
-  connection.query(
-    usQuery,
-    [stock.symbol, stock.name, stock.exchange, stock.type],
-    (err, result) => {
-      if (err) {
-        console.error('Error inserting data:', err);
-        return;
-      }
-      console.log('Data inserted successfully:', result);
+    for (const stockDetail of stockDetails) {
+      saveStockDetail(nation, stockDetail);
     }
-  );
+  } catch (err) {
+    console.log(err);
+  }
 };
 
+saveStockDetails('us');
 connection.end();
