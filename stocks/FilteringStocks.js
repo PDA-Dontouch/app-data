@@ -40,8 +40,9 @@ const filterStocksInUsingMarket = () => {
 // filter stocks gave dividend
 const filterDividendStocks = () => {
   try {
-    const stocksInUsingMarketFile = 'stocks/result/stocksInUsingMarket.json';
-    const dividendCalendarFile = 'stocks/result/dividendCalendar.json';
+    const stocksInUsingMarketFile = 'stocks/result/stocks_in_using_market.json';
+    const dividendCalendarFile =
+      'stocks/result/processed_dividend_calendar.json';
 
     const stocksInUsingMarket = JSON.parse(
       fs.readFileSync(stocksInUsingMarketFile, 'utf8')
@@ -50,19 +51,20 @@ const filterDividendStocks = () => {
       fs.readFileSync(dividendCalendarFile, 'utf8')
     );
 
-    const dividendStockSymbols = new Set(
-      dividendCalendar.map((dividend) => dividend.symbol)
+    const stockSymbolsInUsingMarket = new Set(
+      stocksInUsingMarket.map((dividend) => dividend.symbol)
     );
-    const dividendStocks = stocksInUsingMarket.filter((stock) =>
-      dividendStockSymbols.has(stock.symbol)
+
+    const filtereddividendCalendar = dividendCalendar.filter((dividend) =>
+      stockSymbolsInUsingMarket.has(dividend.symbol)
     );
 
     fs.writeFileSync(
-      'stocks/result/dividendStocks.json',
-      JSON.stringify(dividendStocks, null, 2)
+      'stocks/result/final/dividend_calendar.json',
+      JSON.stringify(filtereddividendCalendar, null, 2)
     );
 
-    console.log('dividendStocks: ', dividendStocks.length);
+    console.log('dividendStocks: ', filtereddividendCalendar.length);
   } catch (err) {
     console.log(err);
   }

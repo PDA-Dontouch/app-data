@@ -141,6 +141,48 @@ const saveStockDetails = (nation) => {
   }
 };
 
+const saveDividendInfo = (nation, dividendInfo) => {
+  const query = `insert into ${nation}_stock_dividend_info (symbol, ${nation}_stock_dividend_payment_date, ${nation}_stock_dividend_date, dividend, is_fixed) values (?, ?, ?, ?, ?)`;
+
+  connection.query(
+    query,
+    [
+      dividendInfo.symbol,
+      dividendInfo.payment_date,
+      dividendInfo.date,
+      dividendInfo.dividend,
+      true,
+    ],
+    (err, result) => {
+      if (err) {
+        console.error('Error inserting data:', err);
+        return;
+      }
+      console.log('Data inserted successfully:', result);
+    }
+  );
+};
+
+const saveDividendInfos = () => {
+  try {
+    const dividendsFile = 'stocks/result/final/dividend_calendar.json';
+    const dividends = JSON.parse(fs.readFileSync(dividendsFile, 'utf8'));
+
+    for (const dividend of dividends) {
+      let nation = 'us';
+      if (dividend.symbol.slice(-3) === '.KS') {
+        nation = 'kr';
+        saveDividendInfo(nation, dividend);
+      }
+
+      // saveDividendInfo(nation, dividend);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+saveDividendInfos();
 // saveStockDetails('us');
 
 connection.end();
