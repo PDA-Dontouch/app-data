@@ -91,6 +91,21 @@ const filterStocksHaveStockCode = () => {
   );
 };
 
+const filterEconomicCalendar = () => {
+  const calendarFile = 'stocks/result/final/economic_calendar_krw_usd.json';
+
+  const calendar = JSON.parse(fs.readFileSync(calendarFile, 'utf8'));
+
+  const filteredCalendar = calendar.filter((issue) => issue.impact !== 'Low');
+
+  fs.writeFileSync(
+    'stocks/result/final/economic_calendar_not_low',
+    JSON.stringify(filteredCalendar, null, 2)
+  );
+};
+
+filterEconomicCalendar();
+
 // filterStocksInUsingMarket();
 // filterDividendStocks();
 // filterStocksHaveStockCode();

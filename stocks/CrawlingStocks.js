@@ -21,9 +21,9 @@ const getAllStocks = async () => {
   }
 };
 
-const getDividendCalendar = async (start_date, end_date) => {
+const getDividendCalendar = async (startDate, endDate) => {
   try {
-    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=${start_date}&to=${end_date}&apikey=${process.env.FMP_API_KEY}`;
+    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
     const resp = await axios.get(url);
     const dividendCalendar = resp.data;
 
@@ -156,6 +156,19 @@ const getStockScores = async (nation) => {
   );
 };
 
+const getEconomicCalendar = async (startDate, endDate) => {
+  const url = `https://financialmodelingprep.com/api/v3/economic_calendar?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
+  const resp = await axios.get(url);
+  const economicCalendar = resp.data;
+
+  fs.writeFileSync(
+    `stocks/result/economic_calendar.json`,
+    JSON.stringify(economicCalendar, null, 2)
+  );
+};
+
+getEconomicCalendar('2023-01-01', '2024-06-07');
+
 // getStockScores('us');
-getDividendCalendar('2023-01-01', '2024-06-07');
+// getDividendCalendar('2023-01-01', '2024-06-07');
 // getStockGrowth('us');

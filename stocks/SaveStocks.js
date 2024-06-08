@@ -182,7 +182,7 @@ const saveDividendInfos = () => {
   }
 };
 
-saveDividendInfos();
+// saveDividendInfos();
 // saveStockDetails('us');
 
 connection.end();
