@@ -104,7 +104,7 @@ const filterEconomicCalendar = () => {
   );
 };
 
-filterEconomicCalendar();
+// filterEconomicCalendar();
 
 // filterStocksInUsingMarket();
 // filterDividendStocks();

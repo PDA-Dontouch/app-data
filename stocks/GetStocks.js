@@ -11,18 +11,21 @@ const connection = mysql.createConnection({
   database: process.env.STOCK_DB_DATABASE,
 });
 
-const getStocks = async (table) => {
+export const getQueryResponse = async () => {
   try {
-    const getKrStocksQuery = `select * from ${table}`;
+    const query = `SELECT symbol, count(*)
+    FROM us_stock_prices
+    GROUP BY symbol
+    having count(*) < 1200;`;
 
-    connection.query(getKrStocksQuery, (err, result) => {
+    connection.query(query, (err, result) => {
       if (err) {
-        console.error('Error inserting data:', err);
+        console.error('Error selecting data:', err);
         return;
       }
 
       fs.writeFileSync(
-        `stocks/result/final/${table}.json`,
+        `stocks/result/us_price_symbols_less_than_1200.json`,
         JSON.stringify(result, null, 2)
       );
     });
@@ -31,5 +34,6 @@ const getStocks = async (table) => {
   }
 };
 
-// getStocks('us_stocks');
+getQueryResponse();
+
 connection.end();
