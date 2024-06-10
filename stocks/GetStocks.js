@@ -13,10 +13,7 @@ const connection = mysql.createConnection({
 
 export const getQueryResponse = async () => {
   try {
-    const query = `SELECT symbol, count(*)
-    FROM us_stock_prices
-    GROUP BY symbol
-    having count(*) < 1200;`;
+    const query = `SELECT symbol from kr_stocks`;
 
     connection.query(query, (err, result) => {
       if (err) {
@@ -25,7 +22,7 @@ export const getQueryResponse = async () => {
       }
 
       fs.writeFileSync(
-        `stocks/result/us_price_symbols_less_than_1200.json`,
+        `stocks/result/final/kr_stocks_symbols.json`,
         JSON.stringify(result, null, 2)
       );
     });

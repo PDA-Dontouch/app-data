@@ -104,6 +104,48 @@ const filterEconomicCalendar = () => {
   );
 };
 
+const filterCalendar = () => {
+  const calendarFile = 'stocks/result/dividend_calendar_original.json';
+  const krStocksFile = 'stocks/result/final/kr_stocks_symbols.json';
+  const usStocksFile = 'stocks/result/final/us_stocks_symbols.json';
+
+  const calendar = JSON.parse(fs.readFileSync(calendarFile, 'utf8'));
+  const krStocks = JSON.parse(fs.readFileSync(krStocksFile, 'utf8'));
+  const usStocks = JSON.parse(fs.readFileSync(usStocksFile, 'utf8'));
+
+  const krSymbols = krStocks.map((stock) => {
+    return stock.symbol;
+  });
+  const usSymbols = usStocks.map((stock) => {
+    return stock.symbol;
+  });
+
+  const krCalendars = [];
+  const usCalendars = [];
+
+  for (const info of calendar) {
+    if (krSymbols.includes(info.symbol)) {
+      krCalendars.push(info);
+      continue;
+    }
+    if (usSymbols.includes(info.symbol)) {
+      usCalendars.push(info);
+    }
+  }
+
+  fs.writeFileSync(
+    'stocks/result/final/kr_calendar.json',
+    JSON.stringify(krCalendars, null, 2)
+  );
+
+  fs.writeFileSync(
+    'stocks/result/final/us_calendar.json',
+    JSON.stringify(usCalendars, null, 2)
+  );
+};
+
+filterCalendar();
+
 // filterEconomicCalendar();
 
 // filterStocksInUsingMarket();

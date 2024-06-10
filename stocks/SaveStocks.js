@@ -142,47 +142,44 @@ const saveStockDetails = (nation) => {
 };
 
 const saveDividendInfo = (nation, dividendInfo) => {
-  const query = `insert into ${nation}_stock_dividend_info (symbol, ${nation}_stock_dividend_payment_date, ${nation}_stock_dividend_date, dividend, is_fixed) values (?, ?, ?, ?, ?)`;
+  return new Promise((resolve, reject) => {
+    const query = `insert into ${nation}_stock_dividend_fixed (symbol, payment_date, dividend_date, dividend) values (?, ?, ?, ?)`;
 
-  connection.query(
-    query,
-    [
-      dividendInfo.symbol,
-      dividendInfo.payment_date,
-      dividendInfo.date,
-      dividendInfo.dividend,
-      true,
-    ],
-    (err, result) => {
-      if (err) {
-        console.error('Error inserting data:', err);
-        return;
+    connection.query(
+      query,
+      [
+        dividendInfo.symbol,
+        dividendInfo.payment_date,
+        dividendInfo.date,
+        dividendInfo.dividend,
+      ],
+      (err, result) => {
+        if (err) {
+          console.error('Error inserting data:', err);
+          reject(err);
+        }
+        console.log('Saved completely');
+        resolve();
       }
-      console.log('Data inserted successfully:', result);
-    }
-  );
+    );
+  });
 };
 
-const saveDividendInfos = () => {
+const saveDividendInfos = async (nation) => {
   try {
-    const dividendsFile = 'stocks/result/final/dividend_calendar.json';
+    const dividendsFile = `stocks/result/final/${nation}_calendar.json`;
     const dividends = JSON.parse(fs.readFileSync(dividendsFile, 'utf8'));
 
     for (const dividend of dividends) {
-      let nation = 'us';
-      if (dividend.symbol.slice(-3) === '.KS') {
-        nation = 'kr';
-        saveDividendInfo(nation, dividend);
-      }
-
-      // saveDividendInfo(nation, dividend);
+      console.log('save ', dividend.symbol);
+      await saveDividendInfo(nation, dividend);
     }
   } catch (err) {
     console.log(err);
   }
 };
 
-// saveDividendInfos();
+await saveDividendInfos('us');
 // saveStockDetails('us');
 
 connection.end();

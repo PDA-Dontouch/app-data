@@ -29,7 +29,7 @@ const getDividendCalendar = async (startDate, endDate) => {
     const dividendCalendar = resp.data;
 
     fs.writeFileSync(
-      'stocks/result/dividend_calendar_future.json',
+      'stocks/result/dividend_calendar_original.json',
       JSON.stringify(dividendCalendar, null, 2)
     );
 
@@ -180,31 +180,19 @@ const getPrices = async (nation, startDate, endDate) => {
 
   // const stocksFile = `stocks/result/final/${nation}_stocks.json`;
 
-  const stocksFile = `stocks/result/final/us_symbols_have_to_get_prices.json`;
+  const stocksFile = `stocks/result/final/us_stocks_3.json`;
 
   const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
 
   for (const stock of stocks) {
     const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${stock.symbol}?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
+
     const prices = (await axios.get(url)).data.historical;
-    console.log(`requst for ${stock.symbol}`);
+    console.log(`requsted ${stock.symbol}`);
 
     if (!prices) {
       continue;
     }
-
-    // for (const price of prices) {
-    //   connection.query(
-    //     insertQuery,
-    //     [stock.symbol, price.date, price.close],
-    //     (err, result) => {
-    //       if (err) {
-    //         console.log(err);
-    //         return;
-    //       }
-    //     }
-    //   );
-    // }
 
     const promises = prices.map(
       (price) =>
@@ -234,10 +222,10 @@ const getPrices = async (nation, startDate, endDate) => {
 const startDate = ['2019-06-09', '2014-06-09'];
 const endDate = ['2024-06-08', '2019-06-08'];
 
-getPrices('us', startDate[0], endDate[0]);
+// getPrices('us', startDate[1], endDate[1]);
 // getPrices('us', startDate[i], endDate[i]);
 
 // getEconomicCalendar('2023-01-01', '2024-06-07');
 // getStockScores('us');
-// getDividendCalendar('2024-06-09', '2025-12-31');
+// getDividendCalendar('2023-01-01', '2024-06-09');
 // getStockGrowth('us');
