@@ -167,7 +167,7 @@ const saveDividendInfo = (nation, dividendInfo) => {
 
 const saveDividendInfos = async (nation) => {
   try {
-    const dividendsFile = `stocks/result/final/${nation}_calendar.json`;
+    const dividendsFile = `stocks/result/final/${nation}_calendar_1.json`;
     const dividends = JSON.parse(fs.readFileSync(dividendsFile, 'utf8'));
 
     for (const dividend of dividends) {

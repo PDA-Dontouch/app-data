@@ -1,6 +1,7 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
 import fs from 'fs';
+import { connect } from 'http2';
 import mysql from 'mysql2';
 
 dotenv.config();
@@ -22,21 +23,61 @@ const getAllStocks = async () => {
   }
 };
 
-const getDividendCalendar = async (startDate, endDate) => {
-  try {
-    const url = `https://financialmodelingprep.com/api/v3/stock_dividend_calendar?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
-    const resp = await axios.get(url);
-    const dividendCalendar = resp.data;
+const getDividendCalendar = async (nation) => {
+  const connection = mysql.createConnection({
+    host: process.env.STOCK_DB_HOST,
+    user: process.env.STOCK_DB_USER,
+    password: process.env.STOCK_DB_PASSWORD,
+    database: process.env.STOCK_DB_DATABASE,
+  });
 
-    fs.writeFileSync(
-      'stocks/result/dividend_calendar_original.json',
-      JSON.stringify(dividendCalendar, null, 2)
+  const stocksFile = `stocks/result/final/${nation}_stocks_symbols.json`;
+
+  const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
+
+  const insertQuery = `insert ${nation}_stock_dividend_fixed (symbol, dividend, dividend_date, payment_date) values (?, ?, ?, ?)`;
+
+  for (const stock of stocks) {
+    const url = `https://financialmodelingprep.com/api/v3/historical-price-full/stock_dividend/${stock.symbol}?apikey=${process.env.FMP_API_KEY}`;
+    const dividends = (await axios.get(url)).data.historical;
+
+    console.log('requested ', stock.symbol);
+
+    const filteredDividends = dividends.filter(
+      (dividend) =>
+        dividend.date.substring(0, 4) === '2023' ||
+        dividend.date.substring(0, 4) === '2024'
     );
 
-    console.log('dividendCalendar: ', dividendCalendar.length);
-  } catch (err) {
-    console.log(err);
+    filteredDividends.reverse();
+
+    const promises = filteredDividends.map(
+      (dividend) =>
+        new Promise((resolve, reject) => {
+          connection.query(
+            insertQuery,
+            [
+              stock.symbol,
+              dividend.dividend,
+              dividend.date,
+              dividend.paymentDate || null,
+            ],
+            (err, result) => {
+              if (err) {
+                console.log(err);
+                return reject();
+              }
+
+              resolve();
+            }
+          );
+        })
+    );
+
+    await Promise.all(promises);
+    console.log('saved ', stock.symbol);
   }
+  connection.end();
 };
 
 const getStockGrowths = async (nation) => {
@@ -219,13 +260,9 @@ const getPrices = async (nation, startDate, endDate) => {
   connection.end();
 };
 
-const startDate = ['2019-06-09', '2014-06-09'];
-const endDate = ['2024-06-08', '2019-06-08'];
-
-// getPrices('us', startDate[1], endDate[1]);
-// getPrices('us', startDate[i], endDate[i]);
-
 // getEconomicCalendar('2023-01-01', '2024-06-07');
 // getStockScores('us');
 // getDividendCalendar('2023-01-01', '2024-06-09');
 // getStockGrowth('us');
+
+getDividendCalendar('us');
