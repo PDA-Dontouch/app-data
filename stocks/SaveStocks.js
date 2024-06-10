@@ -149,7 +149,7 @@ const saveDividendInfo = (nation, dividendInfo) => {
       query,
       [
         dividendInfo.symbol,
-        dividendInfo.payment_date,
+        dividendInfo.paymentDate,
         dividendInfo.date,
         dividendInfo.dividend,
       ],
