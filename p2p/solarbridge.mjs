@@ -28,24 +28,41 @@ const translateFields = (data) => {
     const translatedData = {};
     for (const key in data) {
         if (fieldMapping[key]) {
-            translatedData[fieldMapping[key]] = removeUnmatchedBrackets(data[key]);
+            translatedData[fieldMapping[key]] = processField(data[key], fieldMapping[key]);
         } else {
-            translatedData[key] = removeUnmatchedBrackets(data[key]);
+            translatedData[key] = processField(data[key], key);
         }
     }
     return translatedData;
 };
 
+const processField = (value, key) => {
+    const stringFields = ['fund_usage', 'repayment_method', 'early_repayment_fee', 'project_name', 'project_site', 'facility_capacity', 'contractor', 'business_description', 'credit_rating', 'financial_status', 'same_borrower_loan_status', 'collateral_value', 'senior_debt'];
+    const intFields = ['investment_period'];
+    const doubleFields = ['funding_amount', 'total_investment_amount', 'annual_return_rate', 'gross_return_rate', 'net_return_rate', 'expected_total_return_rate'];
+
+    if (stringFields.includes(key)) {
+        return removeUnmatchedBrackets(value);
+    } else if (intFields.includes(key)) {
+        return parseNumber(value, 'int');
+    } else if (doubleFields.includes(key)) {
+        return parseNumber(value, 'double');
+    }
+    return value;
+};
+
 const removeUnmatchedBrackets = (value) => {
+    if (typeof value !== 'string') return value;
+
     const brackets = {
         '(': ')',
         '{': '}',
         '[': ']'
     };
-    
+
     const openBrackets = Object.keys(brackets);
     const closeBrackets = Object.values(brackets);
-    
+
     const stack = [];
     let cleanedValue = '';
 
@@ -71,6 +88,12 @@ const removeUnmatchedBrackets = (value) => {
     return cleanedValue;
 };
 
+const parseNumber = (value, type) => {
+    if (typeof value !== 'string') return value;
+    const cleanedValue = value.replace(/[^0-9.]/g, '');
+    return type === 'int' ? parseInt(cleanedValue, 10) : parseFloat(cleanedValue);
+};
+
 const fetchProductDetails = async (i) => {
     const url = urlTemplate.replace("{}", i);
     try {
@@ -86,9 +109,9 @@ const fetchProductDetails = async (i) => {
         }
 
         const tableData = $('div.m-t-5.c-white.f-32');
-        const annualYield = tableData.eq(0).text().trim().replace(/- /g, '') || "";
-        const investmentPeriod = tableData.eq(1).text().trim().replace(/- /g, '') || "";
-        const fundingAmount = tableData.eq(2).text().trim().replace(/- /g, '') || "";
+        const annualYield = parseNumber(tableData.eq(0).text().trim().replace(/- /g, ''), 'double') || 0;
+        const investmentPeriod = parseNumber(tableData.eq(1).text().trim().replace(/- /g, ''), 'int') || 0;
+        const fundingAmount = parseNumber(tableData.eq(2).text().trim().replace(/- /g, ''), 'double') || 0;
 
         const borrowerInfoSection = $('div.border-1.p-40');
         const borrowerInfoItems = { "borrower_info_1_title": "", "borrower_info_1_content": "", "borrower_info_2_title": "", "borrower_info_2_content": "", "borrower_info_3_title": "", "borrower_info_3_content": "" };
@@ -105,13 +128,13 @@ const fetchProductDetails = async (i) => {
         const productSummaryItems = {};
 
         productSummarySection.find('div.row.m-0').each((index, element) => {
-            for (let j = 2; j <= 7; j++) { 
+            for (let j = 2; j <= 7; j++) {
                 const keySelector = `#ivqm_1_focus > div:nth-child(${4}) > div > div:nth-child(${j * 2 - 1})`;
                 const valueSelector = `#ivqm_1_focus > div:nth-child(${4}) > div > div:nth-child(${j * 2})`;
 
                 const key = $(keySelector).text().trim().replace(/- /g, '');
                 const value = $(valueSelector).text().trim().replace(/- /g, '');
-                
+
                 if (key && value) {
                     productSummaryItems[key] = value;
                 }
@@ -121,16 +144,16 @@ const fetchProductDetails = async (i) => {
         const additionalYieldSection = $('#ivqm_1_focus > div:nth-child(4) > div > div:nth-child(16)');
         const additionalYieldHtml = additionalYieldSection.html().split('<br>').map(text => text.trim().replace(/- /g, ''));
         const additionalYieldItems = {};
-        
+
         additionalYieldHtml.forEach(item => {
             const [key, value] = item.split(':').map(text => text.trim());
             if (key && value) {
                 if (key.includes('수익률(세전)')) {
-                    additionalYieldItems['gross_return_rate'] = value;
+                    additionalYieldItems['gross_return_rate'] = parseNumber(value, 'double');
                 } else if (key.includes('순수익률(세후)')) {
-                    additionalYieldItems['net_return_rate'] = value;
+                    additionalYieldItems['net_return_rate'] = parseNumber(value, 'double');
                 } else if (key.includes('총 예상수익률')) {
-                    additionalYieldItems['expected_total_return_rate'] = value;
+                    additionalYieldItems['expected_total_return_rate'] = parseNumber(value, 'double');
                 }
             }
         });
@@ -141,14 +164,14 @@ const fetchProductDetails = async (i) => {
             for (let j = 1; j <= 5; j++) {
                 const keySelector = `#ivqm_2_focus > div:nth-child(${3}) > div > div:nth-child(${j * 2 - 1})`;
                 const valueSelector = `#ivqm_2_focus > div:nth-child(${3}) > div > div:nth-child(${j * 2})`;
-        
+
                 const key = $(keySelector).text().trim().replace(/- /g, '');
                 const value = $(valueSelector).text().trim().replace(/- /g, '');
-                
+
                 if (key && value && key !== '인허가') {
                     businessSummaryItems[key] = value;
                 }
-        
+
                 if (key === '인허가') {
                     const admissionHtml = $(valueSelector).html()
                         .split('<br>')
@@ -168,7 +191,7 @@ const fetchProductDetails = async (i) => {
         businessSummarySection.find('img').each((index, element) => {
             businessSummaryImages.push($(element).attr('src'));
         });
-        
+
         const businessSummaryImageLinks = {
             "project_overview_image_link_1": businessSummaryImages[0] || " ",
             "project_overview_image_link_2": businessSummaryImages[1] || " ",
@@ -178,7 +201,7 @@ const fetchProductDetails = async (i) => {
 
         const repaymentResourcesSection = $('#ivqm_3_focus > div.m-t-10.f-14.c-gray-200');
         const repaymentResourcesHtml = repaymentResourcesSection.html().split('<br>').map(text => text.trim().replace(/- /g, ''));
-        
+
         const repaymentResources = {
             "repayment_source_1": repaymentResourcesHtml[0] || " ",
             "repayment_source_2": repaymentResourcesHtml[1] || " "
@@ -188,7 +211,7 @@ const fetchProductDetails = async (i) => {
         const collateralManagementHtml = collateralManagementSection.html()
             .split('<br><br>')
             .flatMap(text => text.split('<br>').map(item => item.trim().replace(/- /g, '')));
-        
+
         const collateralManagement = {
             "collateral_management_1": collateralManagementHtml[0] || " ",
             "collateral_management_2": collateralManagementHtml[1] || " ",
@@ -208,7 +231,7 @@ const fetchProductDetails = async (i) => {
 
         const collateralRecoveryValueSection = $('#ivqm_4_focus > div:nth-child(9) > div:nth-child(4) > div.col-sm-8.col-xs-12.xs-padding-5');
         const collateralRecoveryValueHtml = collateralRecoveryValueSection.html().split('<br>').map(text => text.trim().replace(/- /g, ''));
-        
+
         const collateralRecoveryValue = {
             "collateral_recovery_value_1": collateralRecoveryValueHtml[0] || " ",
             "collateral_recovery_value_2": collateralRecoveryValueHtml[1] || " ",
@@ -218,7 +241,7 @@ const fetchProductDetails = async (i) => {
 
         const creditEnhancementSection = $('#ivqm_4_focus > div:nth-child(5)');
         const creditEnhancementHtml = creditEnhancementSection.html().split('<br>').map(text => text.trim().replace(/- /g, ''));
-    
+
         const creditEnhancement = {
             "credit_enhancement_1": creditEnhancementHtml[0] || " ",
             "credit_enhancement_2": creditEnhancementHtml[1] || " ",
@@ -232,20 +255,20 @@ const fetchProductDetails = async (i) => {
         investorProtectionSection.find('div.row.m-0').each((index, element) => {
             const key = $(element).find('div.col-sm-3.col-xs-12.f-600').text().trim().replace(/- /g, '');
             const value = $(element).find('div.col-sm-8.col-xs-12').text().trim().replace(/- /g, '');
-            if (key && value && key !=="담보물 목록" && key !=="담보물 회수가액") {
+            if (key && value && key !== "담보물 목록" && key !== "담보물 회수가액") {
                 investorProtectionItems[key] = value;
             }
-            
+
         });
 
         return {
             "product_name": productName,
-            "annual_return_rate": annualYield,
+            "annual_return_rate": parseNumber(annualYield, 'double'),
             "investment_period": investmentPeriod,
-            "funding_amount": fundingAmount,
+            "funding_amount": parseNumber(fundingAmount, 'double'),
             ...borrowerInfoItems,
             ...productSummaryItems,
-            ...additionalYieldItems, 
+            ...additionalYieldItems,
             ...businessSummaryItems,
             ...businessSummaryImageLinks,
             ...repaymentResources,
