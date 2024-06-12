@@ -261,8 +261,27 @@ const fetchProductDetails = async (i) => {
 
         });
 
+        const imageUrls = [
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000463/2024061113/20240611133119605_506.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000461/2024061013/20240610135339193_806.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000460/2024060514/20240605144709114_242.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000459/2024060413/20240604130028248_352.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000441/2024051012/20240510125945658_526.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000437/2024050713/20240507131947026_280.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000436/2024050318/20240503182806062_050.png",
+            "https://kr1-sec-api-storage.cloud.toast.com/v1/AUTH_f102c9c0b0c1467bb71ee822a2fa9751/solarpublic/prodThumbnail/A000422/2024041611/20240416113025878_114.png"
+        ];
+        
+        const getRandomImageUrl = () => {
+            const randomIndex = Math.floor(Math.random() * imageUrls.length);
+            return imageUrls[randomIndex];
+        };
+        
         return {
+            "product_id": `A000${i}`,
             "product_name": productName,
+            "title_image_url": getRandomImageUrl(),
+            "sum_of_investment_and_reservation": 0,
             "annual_return_rate": parseNumber(annualYield, 'double'),
             "investment_period": investmentPeriod,
             "funding_amount": parseNumber(fundingAmount, 'double'),
@@ -278,6 +297,7 @@ const fetchProductDetails = async (i) => {
             ...collateralList,
             ...collateralRecoveryValue,
         };
+        
     } catch (error) {
         console.log(`존재하지 않는 페이지입니다: ${url}`);
         return null;
