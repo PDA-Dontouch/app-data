@@ -273,12 +273,6 @@
     "symbol": "060980.KS"
   },
   {
-    "symbol": "069500.KS"
-  },
-  {
-    "symbol": "069660.KS"
-  },
-  {
     "symbol": "078520.KS"
   },
   {
@@ -297,21 +291,6 @@
     "symbol": "088350.KS"
   },
   {
-    "symbol": "091160.KS"
-  },
-  {
-    "symbol": "091170.KS"
-  },
-  {
-    "symbol": "091180.KS"
-  },
-  {
-    "symbol": "091220.KS"
-  },
-  {
-    "symbol": "091230.KS"
-  },
-  {
     "symbol": "092440.KS"
   },
   {
@@ -324,73 +303,7 @@
     "symbol": "097955.KS"
   },
   {
-    "symbol": "098560.KS"
-  },
-  {
-    "symbol": "100910.KS"
-  },
-  {
-    "symbol": "101280.KS"
-  },
-  {
-    "symbol": "102110.KS"
-  },
-  {
-    "symbol": "102780.KS"
-  },
-  {
-    "symbol": "102960.KS"
-  },
-  {
-    "symbol": "102970.KS"
-  },
-  {
-    "symbol": "104520.KS"
-  },
-  {
-    "symbol": "104530.KS"
-  },
-  {
-    "symbol": "105010.KS"
-  },
-  {
-    "symbol": "105190.KS"
-  },
-  {
     "symbol": "105560.KS"
-  },
-  {
-    "symbol": "105780.KS"
-  },
-  {
-    "symbol": "108450.KS"
-  },
-  {
-    "symbol": "108590.KS"
-  },
-  {
-    "symbol": "114100.KS"
-  },
-  {
-    "symbol": "114460.KS"
-  },
-  {
-    "symbol": "114470.KS"
-  },
-  {
-    "symbol": "114820.KS"
-  },
-  {
-    "symbol": "117460.KS"
-  },
-  {
-    "symbol": "117680.KS"
-  },
-  {
-    "symbol": "117700.KS"
-  },
-  {
-    "symbol": "122090.KS"
   },
   {
     "symbol": "122900.KS"
@@ -399,475 +312,49 @@
     "symbol": "123890.KS"
   },
   {
-    "symbol": "131890.KS"
-  },
-  {
-    "symbol": "133690.KS"
-  },
-  {
-    "symbol": "136340.KS"
-  },
-  {
-    "symbol": "138520.KS"
-  },
-  {
-    "symbol": "138530.KS"
-  },
-  {
-    "symbol": "138540.KS"
-  },
-  {
     "symbol": "138930.KS"
   },
   {
     "symbol": "139130.KS"
   },
   {
-    "symbol": "139220.KS"
-  },
-  {
-    "symbol": "139230.KS"
-  },
-  {
-    "symbol": "139240.KS"
-  },
-  {
-    "symbol": "139250.KS"
-  },
-  {
-    "symbol": "139260.KS"
-  },
-  {
-    "symbol": "139270.KS"
-  },
-  {
-    "symbol": "139280.KS"
-  },
-  {
-    "symbol": "139290.KS"
-  },
-  {
     "symbol": "139480.KS"
-  },
-  {
-    "symbol": "140570.KS"
-  },
-  {
-    "symbol": "140580.KS"
-  },
-  {
-    "symbol": "140700.KS"
-  },
-  {
-    "symbol": "140710.KS"
-  },
-  {
-    "symbol": "140950.KS"
-  },
-  {
-    "symbol": "143460.KS"
-  },
-  {
-    "symbol": "143860.KS"
-  },
-  {
-    "symbol": "145850.KS"
-  },
-  {
-    "symbol": "147970.KS"
-  },
-  {
-    "symbol": "148020.KS"
-  },
-  {
-    "symbol": "150460.KS"
-  },
-  {
-    "symbol": "152100.KS"
-  },
-  {
-    "symbol": "152870.KS"
-  },
-  {
-    "symbol": "153270.KS"
-  },
-  {
-    "symbol": "156080.KS"
-  },
-  {
-    "symbol": "157490.KS"
-  },
-  {
-    "symbol": "157500.KS"
-  },
-  {
-    "symbol": "159800.KS"
-  },
-  {
-    "symbol": "161510.KS"
-  },
-  {
-    "symbol": "166400.KS"
   },
   {
     "symbol": "175330.KS"
   },
   {
-    "symbol": "182480.KS"
-  },
-  {
-    "symbol": "192720.KS"
-  },
-  {
-    "symbol": "210780.KS"
-  },
-  {
-    "symbol": "211560.KS"
-  },
-  {
-    "symbol": "211900.KS"
-  },
-  {
     "symbol": "213500.KS"
-  },
-  {
-    "symbol": "213610.KS"
   },
   {
     "symbol": "214320.KS"
   },
   {
-    "symbol": "215620.KS"
-  },
-  {
-    "symbol": "223190.KS"
-  },
-  {
-    "symbol": "226380.KS"
-  },
-  {
-    "symbol": "226490.KS"
-  },
-  {
-    "symbol": "226980.KS"
-  },
-  {
-    "symbol": "227540.KS"
-  },
-  {
-    "symbol": "227550.KS"
-  },
-  {
-    "symbol": "227560.KS"
-  },
-  {
-    "symbol": "227570.KS"
-  },
-  {
-    "symbol": "227830.KS"
-  },
-  {
-    "symbol": "228790.KS"
-  },
-  {
-    "symbol": "228800.KS"
-  },
-  {
-    "symbol": "228810.KS"
-  },
-  {
-    "symbol": "228820.KS"
-  },
-  {
-    "symbol": "229200.KS"
-  },
-  {
-    "symbol": "229720.KS"
-  },
-  {
-    "symbol": "232080.KS"
-  },
-  {
-    "symbol": "237350.KS"
-  },
-  {
     "symbol": "241560.KS"
-  },
-  {
-    "symbol": "244580.KS"
-  },
-  {
-    "symbol": "244620.KS"
-  },
-  {
-    "symbol": "245340.KS"
-  },
-  {
-    "symbol": "245350.KS"
-  },
-  {
-    "symbol": "252000.KS"
-  },
-  {
-    "symbol": "252650.KS"
-  },
-  {
-    "symbol": "261060.KS"
-  },
-  {
-    "symbol": "261070.KS"
-  },
-  {
-    "symbol": "261140.KS"
-  },
-  {
-    "symbol": "266160.KS"
-  },
-  {
-    "symbol": "266360.KS"
-  },
-  {
-    "symbol": "266370.KS"
-  },
-  {
-    "symbol": "266390.KS"
-  },
-  {
-    "symbol": "266410.KS"
-  },
-  {
-    "symbol": "266420.KS"
-  },
-  {
-    "symbol": "266550.KS"
   },
   {
     "symbol": "267250.KS"
   },
   {
-    "symbol": "269370.KS"
-  },
-  {
-    "symbol": "269530.KS"
-  },
-  {
-    "symbol": "269540.KS"
-  },
-  {
-    "symbol": "270800.KS"
-  },
-  {
-    "symbol": "270810.KS"
-  },
-  {
-    "symbol": "272220.KS"
-  },
-  {
-    "symbol": "272230.KS"
-  },
-  {
-    "symbol": "275280.KS"
-  },
-  {
-    "symbol": "275290.KS"
-  },
-  {
-    "symbol": "275300.KS"
-  },
-  {
-    "symbol": "276970.KS"
-  },
-  {
-    "symbol": "277630.KS"
-  },
-  {
-    "symbol": "277640.KS"
-  },
-  {
-    "symbol": "277650.KS"
-  },
-  {
-    "symbol": "279530.KS"
-  },
-  {
-    "symbol": "279540.KS"
-  },
-  {
-    "symbol": "280920.KS"
-  },
-  {
-    "symbol": "281990.KS"
-  },
-  {
     "symbol": "282690.KS"
-  },
-  {
-    "symbol": "284980.KS"
-  },
-  {
-    "symbol": "284990.KS"
-  },
-  {
-    "symbol": "285000.KS"
-  },
-  {
-    "symbol": "285010.KS"
-  },
-  {
-    "symbol": "285020.KS"
-  },
-  {
-    "symbol": "285690.KS"
-  },
-  {
-    "symbol": "287300.KS"
-  },
-  {
-    "symbol": "287310.KS"
-  },
-  {
-    "symbol": "287320.KS"
-  },
-  {
-    "symbol": "287330.KS"
-  },
-  {
-    "symbol": "289040.KS"
-  },
-  {
-    "symbol": "289250.KS"
-  },
-  {
-    "symbol": "289260.KS"
-  },
-  {
-    "symbol": "289480.KS"
-  },
-  {
-    "symbol": "290080.KS"
-  },
-  {
-    "symbol": "290130.KS"
-  },
-  {
-    "symbol": "292050.KS"
-  },
-  {
-    "symbol": "292160.KS"
-  },
-  {
-    "symbol": "292190.KS"
-  },
-  {
-    "symbol": "292500.KS"
-  },
-  {
-    "symbol": "292730.KS"
   },
   {
     "symbol": "293940.KS"
   },
   {
-    "symbol": "298770.KS"
-  },
-  {
-    "symbol": "300610.KS"
-  },
-  {
-    "symbol": "300640.KS"
-  },
-  {
-    "symbol": "300950.KS"
-  },
-  {
-    "symbol": "302450.KS"
-  },
-  {
-    "symbol": "304760.KS"
-  },
-  {
-    "symbol": "304770.KS"
-  },
-  {
-    "symbol": "305050.KS"
-  },
-  {
-    "symbol": "305540.KS"
-  },
-  {
-    "symbol": "305720.KS"
-  },
-  {
-    "symbol": "307510.KS"
-  },
-  {
-    "symbol": "307520.KS"
-  },
-  {
     "symbol": "307950.KS"
-  },
-  {
-    "symbol": "309230.KS"
-  },
-  {
-    "symbol": "314700.KS"
-  },
-  {
-    "symbol": "315270.KS"
-  },
-  {
-    "symbol": "315480.KS"
   },
   {
     "symbol": "316140.KS"
   },
   {
-    "symbol": "322120.KS"
-  },
-  {
-    "symbol": "322130.KS"
-  },
-  {
-    "symbol": "322150.KS"
-  },
-  {
-    "symbol": "322400.KS"
-  },
-  {
-    "symbol": "325010.KS"
-  },
-  {
-    "symbol": "325020.KS"
-  },
-  {
-    "symbol": "326230.KS"
-  },
-  {
-    "symbol": "326240.KS"
-  },
-  {
-    "symbol": "329200.KS"
-  },
-  {
-    "symbol": "331910.KS"
-  },
-  {
     "symbol": "334890.KS"
-  },
-  {
-    "symbol": "337160.KS"
   },
   {
     "symbol": "338100.KS"
   },
   {
     "symbol": "344820.KS"
-  },
-  {
-    "symbol": "346000.KS"
-  },
-  {
-    "symbol": "352540.KS"
   },
   {
     "symbol": "353200.KS"
@@ -882,66 +369,6 @@
     "symbol": "357250.KS"
   },
   {
-    "symbol": "360200.KS"
-  },
-  {
-    "symbol": "360750.KS"
-  },
-  {
-    "symbol": "364690.KS"
-  },
-  {
-    "symbol": "364960.KS"
-  },
-  {
-    "symbol": "364970.KS"
-  },
-  {
-    "symbol": "364980.KS"
-  },
-  {
-    "symbol": "364990.KS"
-  },
-  {
-    "symbol": "365000.KS"
-  },
-  {
-    "symbol": "365040.KS"
-  },
-  {
     "symbol": "365550.KS"
-  },
-  {
-    "symbol": "367380.KS"
-  },
-  {
-    "symbol": "367760.KS"
-  },
-  {
-    "symbol": "367770.KS"
-  },
-  {
-    "symbol": "368590.KS"
-  },
-  {
-    "symbol": "368680.KS"
-  },
-  {
-    "symbol": "373490.KS"
-  },
-  {
-    "symbol": "377990.KS"
-  },
-  {
-    "symbol": "379780.KS"
-  },
-  {
-    "symbol": "381180.KS"
-  },
-  {
-    "symbol": "381970.KS"
-  },
-  {
-    "symbol": "395400.KS"
   }
 ]
