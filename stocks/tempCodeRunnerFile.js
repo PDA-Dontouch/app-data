@@ -1,0 +1,1 @@
+ockInfo = await getStockNam

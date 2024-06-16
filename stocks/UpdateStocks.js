@@ -1,8 +1,7 @@
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
 import axios from 'axios';
-
-import { getStocks } from './GetStocks';
+import fs from 'fs';
 
 dotenv.config();
 
@@ -13,8 +12,26 @@ const connection = mysql.createConnection({
   database: process.env.STOCK_DB_DATABASE,
 });
 
-// 주가 변동 업데이트 (전체)
+const updateUsStockNames = async () => {
+  try {
+    const stocksFile = `stocks/result/final/us_stock_names.json`;
+    const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
 
-// stock에 배당률 업데이트
+    for (const stock of stocks) {
+      console.log('update ', stock.name);
+      const updateQuery = `update us_stocks set name = '${stock.name}' where symbol = '${stock.symbol}';`;
 
-connection.end();
+      connection.query(updateQuery, (err, result) => {
+        if (err) {
+          console.error('Error selecting data:', err);
+          return;
+        }
+        console.log('updated ', stock.name);
+      });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+updateUsStockNames();
