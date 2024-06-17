@@ -34,4 +34,34 @@ const updateUsStockNames = async () => {
   }
 };
 
-updateUsStockNames();
+const updateStockEnglishNames = async () => {
+  try {
+    const stocksFile = `stocks/result/prev/us_stocks_english_name_is_empty.json`;
+    const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
+
+    const allStocksFile = `stocks/result/prev/stocks_in_using_market.json`;
+    const allStocks = JSON.parse(fs.readFileSync(allStocksFile, 'utf8'));
+
+    for (const stockToUpdate of stocks) {
+      const foundStock = allStocks.find(
+        (stock) => stock.symbol === stockToUpdate.symbol
+      );
+
+      console.log('update ', stockToUpdate.symbol);
+      const updateQuery = `update us_stocks set english_name = "${foundStock.name}" where symbol = '${stockToUpdate.symbol}';`;
+
+      connection.query(updateQuery, (err, result) => {
+        if (err) {
+          console.error('Error selecting data:', err);
+          return;
+        }
+        console.log('updated');
+      });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// updateUsStockNames();
+updateStockEnglishNames();
