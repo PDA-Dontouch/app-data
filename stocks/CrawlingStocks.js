@@ -210,23 +210,21 @@ const getEconomicCalendar = async (startDate, endDate) => {
 };
 
 // save immediately
-const getPrices = async (nation, startDate, endDate) => {
+const getPrices = async (symbolFileName, nation, startDate) => {
   const connection = mysql.createConnection({
     host: process.env.STOCK_DB_HOST,
     user: process.env.STOCK_DB_USER,
     password: process.env.STOCK_DB_PASSWORD,
     database: process.env.STOCK_DB_DATABASE,
   });
-  const insertQuery = `insert into ${nation}_stock_prices (symbol, day, close_price) values (?, ?, ?)`;
+  const insertQuery = `insert into ${nation}_stock_full_prices (symbol, date, open, high, low, close) values (?, ?, ?, ?, ?, ?)`;
 
-  // const stocksFile = `stocks/result/final/${nation}_stocks.json`;
-
-  const stocksFile = `stocks/result/final/us_stocks_3.json`;
+  const stocksFile = `stocks/result/final/${symbolFileName}.json`;
 
   const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
 
   for (const stock of stocks) {
-    const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${stock.symbol}?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
+    const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${stock.symbol}?from=${startDate}&apikey=${process.env.FMP_API_KEY}`;
 
     const prices = (await axios.get(url)).data.historical;
     console.log(`requsted ${stock.symbol}`);
@@ -240,7 +238,14 @@ const getPrices = async (nation, startDate, endDate) => {
         new Promise((resolve, reject) => {
           connection.query(
             insertQuery,
-            [stock.symbol, price.date, price.close],
+            [
+              stock.symbol.slice(0, -3),
+              price.date,
+              price.open,
+              price.high,
+              price.low,
+              price.close,
+            ],
             (err, result) => {
               if (err) {
                 console.log(err);
@@ -317,7 +322,7 @@ const getStockName = async (stock) => {
   return resp.data;
 };
 
-getStockNames('us');
+getPrices('us_stocks_symbols_2', 'us', '2014-01-01');
 // getEconomicCalendar('2023-01-01', '2024-06-07');
 // getStockScores('us');
 // getDividendCalendar('2023-01-01', '2024-06-09');
