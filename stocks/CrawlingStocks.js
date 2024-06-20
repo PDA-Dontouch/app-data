@@ -210,23 +210,21 @@ const getEconomicCalendar = async (startDate, endDate) => {
 };
 
 // save immediately
-const getPrices = async (nation, startDate, endDate) => {
+const getPrices = async (symbolFileName, nation, startDate) => {
   const connection = mysql.createConnection({
     host: process.env.STOCK_DB_HOST,
     user: process.env.STOCK_DB_USER,
     password: process.env.STOCK_DB_PASSWORD,
     database: process.env.STOCK_DB_DATABASE,
   });
-  const insertQuery = `insert into ${nation}_stock_prices (symbol, day, close_price) values (?, ?, ?)`;
+  const insertQuery = `insert into ${nation}_stock_full_prices (symbol, date, open, high, low, close) values (?, ?, ?, ?, ?, ?)`;
 
-  // const stocksFile = `stocks/result/final/${nation}_stocks.json`;
-
-  const stocksFile = `stocks/result/final/us_stocks_3.json`;
+  const stocksFile = `stocks/result/final/${symbolFileName}.json`;
 
   const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
 
   for (const stock of stocks) {
-    const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${stock.symbol}?from=${startDate}&to=${endDate}&apikey=${process.env.FMP_API_KEY}`;
+    const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${stock.symbol}?from=${startDate}&apikey=${process.env.FMP_API_KEY}`;
 
     const prices = (await axios.get(url)).data.historical;
     console.log(`requsted ${stock.symbol}`);
@@ -240,7 +238,14 @@ const getPrices = async (nation, startDate, endDate) => {
         new Promise((resolve, reject) => {
           connection.query(
             insertQuery,
-            [stock.symbol, price.date, price.close],
+            [
+              stock.symbol.slice(0, -3),
+              price.date,
+              price.open,
+              price.high,
+              price.low,
+              price.close,
+            ],
             (err, result) => {
               if (err) {
                 console.log(err);
@@ -260,9 +265,67 @@ const getPrices = async (nation, startDate, endDate) => {
   connection.end();
 };
 
+const getStockNames = async (nation) => {
+  const stocksFile = `stocks/result/final/${nation}_stocks_symbols.json`;
+
+  const stocks = JSON.parse(fs.readFileSync(stocksFile, 'utf8'));
+  const stockNames = [];
+
+  let cnt = 0;
+
+  for (const stock of stocks) {
+    console.log('request ', stock.symbol);
+
+    if (cnt === 10) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      cnt = 0;
+    }
+
+    const stockInfo = await getStockName(stock);
+    cnt++;
+
+    if (stockInfo.rt_cd === '0') {
+      stockNames.push({
+        symbol: stockInfo.output.pdno,
+        name: stockInfo.output.prdt_name,
+      });
+    }
+  }
+
+  fs.writeFileSync(
+    'stocks/result/final/us_stock_names.json',
+    JSON.stringify(stockNames, null, 2)
+  );
+};
+
+const getStockName = async (stock) => {
+  let type = '300';
+
+  if (stock.exchange === 'NYSE') {
+    type = '513';
+  }
+  if (stock.exchange === 'NASDAQ') {
+    type = '512';
+  }
+
+  const url = `https://openapi.koreainvestment.com:9443/uapi/domestic-stock/v1/quotations/search-info?PDNO=${stock.symbol}&PRDT_TYPE_CD=${type}`;
+  const resp = await axios.get(url, {
+    headers: {
+      'content-type': 'application/json',
+      authorization: process.env.KIS_AUTH,
+      appkey: process.env.KIS_APP_KEY,
+      appsecret: process.env.KIS_APP_SECRET,
+      tr_id: 'CTPF1604R',
+      custtype: 'P',
+    },
+  });
+  return resp.data;
+};
+
+getPrices('us_stocks_symbols_2', 'us', '2014-01-01');
 // getEconomicCalendar('2023-01-01', '2024-06-07');
 // getStockScores('us');
 // getDividendCalendar('2023-01-01', '2024-06-09');
 // getStockGrowth('us');
 
-getDividendCalendar('us');
+// getDividendCalendar('us');
