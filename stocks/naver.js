@@ -13,9 +13,12 @@ const urls = {
 
 const parseChangeAndPercent = (changeStr) => {
     const [change, percent] = changeStr.split(' ');
+    const parsedChange = parseFloat(change.replace(/,/g, ''));
+    const parsedPercent = parseFloat(percent.replace('%', ''));
+
     return {
-        change: parseFloat(change.replace(/,/g, '')),
-        percent: parseFloat(percent.replace('%', ''))
+        change: parsedPercent < 0 ? -Math.abs(parsedChange) : parsedChange,
+        percent: parsedPercent
     };
 };
 
