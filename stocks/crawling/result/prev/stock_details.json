@@ -1,0 +1,23 @@
+[
+  {
+    "symbol": "003670.KS",
+    "market_cap": 21329041669500,
+    "altman_z_score": 3.7679377234478157,
+    "piotroski_score": 5,
+    "ten_y_revenue_growth_per_share": 1.8599226115360505,
+    "five_y_revenue_growth_per_share": 1.7494663296856154,
+    "three_y_revenue_growth_per_share": 1.3941665341697473,
+    "ten_y_operating_cf_growth_per_share": -4.216204801572046,
+    "five_y_operating_cf_growth_per_share": -5.204422653977107,
+    "three_y_operating_cf_growth_per_share": -10.153842496350956,
+    "ten_y_net_income_growth_per_share": -0.6091380894094414,
+    "five_y_net_income_growth_per_share": -0.8263049514215833,
+    "three_y_net_income_growth_per_share": -0.23487445484079417,
+    "ten_y_shareholders_equity_growth_per_share": 3.233342482850996,
+    "five_y_shareholders_equity_growth_per_share": 1.5057052604778525,
+    "three_y_shareholders_equity_growth_per_share": 0.8502580586323228,
+    "ten_y_dividend_per_share_growth_per_share": 1.1589714272933664,
+    "five_y_dividend_per_share_growth_per_share": 0,
+    "three_y_dividend_per_share_growth_per_share": -0.2369198578236017
+  }
+]
