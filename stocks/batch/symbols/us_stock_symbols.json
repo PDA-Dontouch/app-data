@@ -120,15 +120,6 @@
     "symbol": "AEIS"
   },
   {
-    "symbol": "AEL"
-  },
-  {
-    "symbol": "AEL-PA"
-  },
-  {
-    "symbol": "AEL-PB"
-  },
-  {
     "symbol": "AEM"
   },
   {
@@ -142,9 +133,6 @@
   },
   {
     "symbol": "AES"
-  },
-  {
-    "symbol": "AESC"
   },
   {
     "symbol": "AESI"
@@ -270,9 +258,6 @@
     "symbol": "AIG"
   },
   {
-    "symbol": "AIG-PA"
-  },
-  {
     "symbol": "AIN"
   },
   {
@@ -292,9 +277,6 @@
   },
   {
     "symbol": "AJX"
-  },
-  {
-    "symbol": "AJXA"
   },
   {
     "symbol": "AKO-A"
@@ -409,9 +391,6 @@
   },
   {
     "symbol": "AMKR"
-  },
-  {
-    "symbol": "AMNB"
   },
   {
     "symbol": "AMP"
@@ -966,12 +945,6 @@
     "symbol": "BK"
   },
   {
-    "symbol": "BKCC"
-  },
-  {
-    "symbol": "BKDT"
-  },
-  {
     "symbol": "BKE"
   },
   {
@@ -1189,9 +1162,6 @@
   },
   {
     "symbol": "C"
-  },
-  {
-    "symbol": "C-PJ"
   },
   {
     "symbol": "CABO"
@@ -1773,12 +1743,6 @@
     "symbol": "CSSEN"
   },
   {
-    "symbol": "CSTA"
-  },
-  {
-    "symbol": "CSTR"
-  },
-  {
     "symbol": "CSV"
   },
   {
@@ -1843,9 +1807,6 @@
   },
   {
     "symbol": "CVBF"
-  },
-  {
-    "symbol": "CVCY"
   },
   {
     "symbol": "CVE"
@@ -2235,9 +2196,6 @@
     "symbol": "EGF"
   },
   {
-    "symbol": "EGLE"
-  },
-  {
     "symbol": "EGP"
   },
   {
@@ -2377,9 +2335,6 @@
   },
   {
     "symbol": "EQT"
-  },
-  {
-    "symbol": "ERF"
   },
   {
     "symbol": "ERIC"
@@ -2641,9 +2596,6 @@
   },
   {
     "symbol": "FHN-PC"
-  },
-  {
-    "symbol": "FHN-PD"
   },
   {
     "symbol": "FHN-PE"
@@ -2988,9 +2940,6 @@
     "symbol": "GLNG"
   },
   {
-    "symbol": "GLOG-PA"
-  },
-  {
     "symbol": "GLOP-PA"
   },
   {
@@ -3108,9 +3057,6 @@
     "symbol": "GRP-UN"
   },
   {
-    "symbol": "GRPH"
-  },
-  {
     "symbol": "GS"
   },
   {
@@ -3121,9 +3067,6 @@
   },
   {
     "symbol": "GS-PD"
-  },
-  {
-    "symbol": "GS-PK"
   },
   {
     "symbol": "GSBC"
@@ -3789,9 +3732,6 @@
     "symbol": "KALU"
   },
   {
-    "symbol": "KAMN"
-  },
-  {
     "symbol": "KB"
   },
   {
@@ -3981,9 +3921,6 @@
     "symbol": "LAZ"
   },
   {
-    "symbol": "LBAI"
-  },
-  {
     "symbol": "LBRDP"
   },
   {
@@ -4051,9 +3988,6 @@
   },
   {
     "symbol": "LHX"
-  },
-  {
-    "symbol": "LIAN"
   },
   {
     "symbol": "LII"
@@ -4176,9 +4110,6 @@
     "symbol": "MAC"
   },
   {
-    "symbol": "MACK"
-  },
-  {
     "symbol": "MAIN"
   },
   {
@@ -4218,9 +4149,6 @@
     "symbol": "MBINO"
   },
   {
-    "symbol": "MBINP"
-  },
-  {
     "symbol": "MBNKP"
   },
   {
@@ -4258,9 +4186,6 @@
   },
   {
     "symbol": "MCY"
-  },
-  {
-    "symbol": "MDC"
   },
   {
     "symbol": "MDLZ"
@@ -4390,9 +4315,6 @@
   },
   {
     "symbol": "MITT-PC"
-  },
-  {
-    "symbol": "MIXT"
   },
   {
     "symbol": "MIY"
@@ -4737,9 +4659,6 @@
     "symbol": "NI"
   },
   {
-    "symbol": "NI-PB"
-  },
-  {
     "symbol": "NIC"
   },
   {
@@ -4827,18 +4746,6 @@
     "symbol": "NRP"
   },
   {
-    "symbol": "NS"
-  },
-  {
-    "symbol": "NS-PA"
-  },
-  {
-    "symbol": "NS-PB"
-  },
-  {
-    "symbol": "NS-PC"
-  },
-  {
     "symbol": "NSA"
   },
   {
@@ -4849,9 +4756,6 @@
   },
   {
     "symbol": "NSP"
-  },
-  {
-    "symbol": "NSS"
   },
   {
     "symbol": "NSSC"
@@ -5223,9 +5127,6 @@
     "symbol": "PARAA"
   },
   {
-    "symbol": "PARAP"
-  },
-  {
     "symbol": "PATK"
   },
   {
@@ -5278,9 +5179,6 @@
   },
   {
     "symbol": "PDM"
-  },
-  {
-    "symbol": "PEAK"
   },
   {
     "symbol": "PEB"
@@ -5589,9 +5487,6 @@
     "symbol": "PX"
   },
   {
-    "symbol": "PXD"
-  },
-  {
     "symbol": "PXSAP"
   },
   {
@@ -5758,9 +5653,6 @@
   },
   {
     "symbol": "RILYN"
-  },
-  {
-    "symbol": "RILYO"
   },
   {
     "symbol": "RILYP"
@@ -6156,9 +6048,6 @@
     "symbol": "SIMO"
   },
   {
-    "symbol": "SIOX"
-  },
-  {
     "symbol": "SIRI"
   },
   {
@@ -6220,9 +6109,6 @@
   },
   {
     "symbol": "SMG"
-  },
-  {
-    "symbol": "SMMF"
   },
   {
     "symbol": "SMP"
@@ -6426,9 +6312,6 @@
     "symbol": "STT"
   },
   {
-    "symbol": "STT-PD"
-  },
-  {
     "symbol": "STT-PG"
   },
   {
@@ -6525,9 +6408,6 @@
     "symbol": "TAP-A"
   },
   {
-    "symbol": "TAST"
-  },
-  {
     "symbol": "TBB"
   },
   {
@@ -6604,15 +6484,6 @@
   },
   {
     "symbol": "TFX"
-  },
-  {
-    "symbol": "TGH"
-  },
-  {
-    "symbol": "TGH-PA"
-  },
-  {
-    "symbol": "TGH-PB"
   },
   {
     "symbol": "TGLS"
@@ -6916,9 +6787,6 @@
   },
   {
     "symbol": "UGI"
-  },
-  {
-    "symbol": "UGIC"
   },
   {
     "symbol": "UGP"
@@ -7273,9 +7141,6 @@
   },
   {
     "symbol": "WFC-PL"
-  },
-  {
-    "symbol": "WFC-PR"
   },
   {
     "symbol": "WFC-PY"

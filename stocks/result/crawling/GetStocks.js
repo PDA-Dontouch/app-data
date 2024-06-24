@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 
 export const getQueryResponse = async () => {
   try {
-    const query = `select symbol from kr_stocks`;
+    const query = `select symbol from us_stocks`;
 
     connection.query(query, (err, result) => {
       if (err) {
@@ -22,7 +22,7 @@ export const getQueryResponse = async () => {
       }
 
       fs.writeFileSync(
-        `stocks/batch/symbols/kr_stock_symbols.json`,
+        `stocks/batch/symbols/us_stock_symbols.json`,
         JSON.stringify(result, null, 2)
       );
     });

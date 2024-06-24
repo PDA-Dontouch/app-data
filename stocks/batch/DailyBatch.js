@@ -4,7 +4,8 @@ import fs from 'fs';
 
 import { updateClosePrice } from './batchClosePrice.js';
 
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
+  connectionLimit: 150,
   host: process.env.STOCK_DB_HOST,
   user: process.env.STOCK_DB_USER,
   password: process.env.STOCK_DB_PASSWORD,
@@ -22,7 +23,7 @@ const getFormattedDate = (date) => {
 try {
   const today = new Date();
   const oneWeekAgo = new Date(today);
-  oneWeekAgo.setDate(today.getDate() - 7);
+  oneWeekAgo.setDate(today.getDate() - 14);
 
   const from = getFormattedDate(oneWeekAgo);
   const to = getFormattedDate(today);
@@ -30,12 +31,11 @@ try {
   console.log(`batch date: ${from} ~ ${to}`);
 
   await Promise.all([
-    updateClosePrice('kr', from, to, connection),
-    // updateClosePrice('us', from, to, connection),
+    // updateClosePrice('kr', from, to, pool),
+    updateClosePrice('us', from, to, pool),
   ]);
 } catch (error) {
   console.error('Error updating close prices:', error);
-  connection.end();
 } finally {
-  connection.end();
+  pool.end();
 }
