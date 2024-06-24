@@ -1,0 +1,2370 @@
+[
+  {
+    "symbol": "MTX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NLY-PI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PII",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JPM-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NNI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GNL-PB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ATH-PB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BSM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CLB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ALTG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VOYA-PB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAC-PL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BBDO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LZB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "USB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GIS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PSX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GRNT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BHE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WMS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ORI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RHI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KREF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TFII",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FBK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MOS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FRT-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AKR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SOJC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GVA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CION",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CIO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRD-A",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FRT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NEM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CPB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BEKE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NVO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DLX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TSE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TXO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ES",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AIG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EME",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NVGS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BEPC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MUSA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NXC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HCA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FBRT-PE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HIW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AYI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TIMB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RTO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JILL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KMB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WCC-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OMC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DOV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RMT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DLR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HLT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RC-PE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MAN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NVS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ST",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HYT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NTR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PAYC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FLO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ACA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AUB",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BOH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EPD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IGT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MRO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HESM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PPL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ORCL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CADE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KBH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NOG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BTU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ONL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ABR-PF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RSG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AAN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GBCI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GGB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GSL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CAG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CHMI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BCH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MDV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SAP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FHN-PF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ZBH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ESS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HCI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MCD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AER",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AMH-PG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CII",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MS-PK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DUK-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FTS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AWR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAC-PQ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "INGR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ECO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GPMT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TRTN-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SITC-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MS-PO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LPG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NOA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CXT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TPVG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PSTL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "XYF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DLR-PL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GBX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DTB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KTB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KAI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CBL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BRSP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JCI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "O",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MPX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CHH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SSTK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NUE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMS-PB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SOR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GEF-B",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RLI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MHN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KKR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BSBR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MS-PL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CWEN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CCK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EAI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DKL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MPLX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NJR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HSBC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LEN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VET",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AMH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LNG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TPB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HBM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LNC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BANC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ASBA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SCHW-PD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ORC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OWL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HIG-PG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AFL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MCK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MMC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BIPC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMSC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CNMD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "REVG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRBG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COF-PI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PHX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TRTN-PD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TRTN-PE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JOE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DAL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MPC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HPP-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HRL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BHR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BTE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DHI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ZTS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SLG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TNET",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ETN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CTO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FBIN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GMRE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "INSW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MUC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UTZ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CAL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HOMB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LLY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MCS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PBF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BFS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BNL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CTVA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VIV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MUFG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "THO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LII",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NWN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RLJ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MRK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RPM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WES",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WLKP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ADC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EQH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IVZ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NPO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "STAG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SIG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FNV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SLF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NRG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LEN-B",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MKC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JBL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RNGR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RMD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NTG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LEA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WFG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AMTB",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "DOC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HUYA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VTR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TFPM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FMC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "YMM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ATKR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HNI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RGR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IPG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ASC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GPI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AOS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CWEN-A",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DGX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "APD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ADT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CCU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DBRG-PJ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UWMC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NREF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CTO-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EDD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FBMS",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AMH-PH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FCF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PINE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LFT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "T-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NLY-PG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PHI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IDT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "USB-PP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "STR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FBP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DSM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BCC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BXMT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AES",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HDB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GHY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KIM-PM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PNC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ARIS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PRG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PKX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DTM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AWK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FNF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FTI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TRTX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BKE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "D",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SKT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GFL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KRO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ABBV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FNB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AEE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SYY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PBA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HQH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RJF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CRGY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NAT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RWT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SPH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ESI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FIX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AHH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GPRK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GRC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ET",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MDT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OKE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EDR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BBAR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NYT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CVE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MQY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WFC-PZ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DTE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DUK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IRS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SLG-PI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OLN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SEM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CSR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EARN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WHD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MTRN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "QSR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NIC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KFY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PIPR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KNTK",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "COF-PK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EIG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BERY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MNSO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CWH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DRD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GNE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SFBS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EPRT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RACE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ARDC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PFSI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PGR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAC-PS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GATX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ESNT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GRMN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PKST",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PBI-PB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MSA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RHP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BWNB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ASA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SF-PD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KOF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MUJ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CWT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BHLB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SCHW-PJ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SJW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AHL-PD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "USB-PS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MFA-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TBC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TDS-PV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PHD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KEY-PI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GIL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DTG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DMB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GWW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BKU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JWN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BLX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "STVN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CMTG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ITT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OMF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EBR-B",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BC-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "STT-PG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TNL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LNN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HUM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KNOP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KIM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OPY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BRDG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MOV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NGVC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LAD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ITUB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OFG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DVN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DIN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TWO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WSR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OSK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KYN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HSY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EMR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WRK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CFR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MAC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FSK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IFS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NOC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OUT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AEO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MITT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JNJ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GNL-PD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OTIS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AFG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PRH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ING",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GTN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BIP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PEB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PRI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CTS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SON",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "COF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SXT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BWXT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ENB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DSX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RCB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ENLC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "STEW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CVI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PHM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "APH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SNA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CIG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RNST",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "IRT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SMBK",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "HCC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AIN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NTB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HAL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WFC-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CTRA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LYG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "LEG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GES",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PRMW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DCI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OBDC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "FDS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BDN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ALLY",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EQH-PC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DBI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "INVH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SWK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "UDR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GNTY",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "SNDR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RTX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SNV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WDS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SSB",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "WFC-PA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WTTR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "DEO",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ELC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HRI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BF-B",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NMM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HTH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RF-PE",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "RF",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AIRC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CBU",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CUZ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GPN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "E",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SXC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CARR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SUPV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BBD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BUD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BUR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SCS",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CNA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MATX",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "X",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PKG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BAP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BBDC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "IIIN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AJG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "TSI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CW",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EOG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "HTGC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "SAR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "PBR",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "VAC",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "XYL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "ELME",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "L",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JPM-PK",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "JPM-PL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OLP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AVA",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "KEY-PL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "OPFI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WDH",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CIB",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "NUV",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MOG-A",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "AIT",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GAIN",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MLKN",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "JKHY",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GABC",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "FRST",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AEIS",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "AMP",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "APA",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "MVBF",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BSET",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "COKE",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CCLDP",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GSBD",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "GOGL",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "DGICA",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "VZ",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EPSN",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "STN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WHG",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "WM",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "CCAP",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "FSBW",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "RL",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "EURN",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "BANF",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "BGFV",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "GCMG",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "CAMT",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "PBI",
+    "exchange": "NYSE"
+  },
+  {
+    "symbol": "MCBC",
+    "exchange": "NASDAQ"
+  },
+  {
+    "symbol": "HIFS",
+    "exchange": "NASDAQ"
+  }
+]

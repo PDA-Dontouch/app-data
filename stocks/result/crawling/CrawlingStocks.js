@@ -217,7 +217,7 @@ const getPrices = async (symbolFileName, nation, startDate) => {
     password: process.env.STOCK_DB_PASSWORD,
     database: process.env.STOCK_DB_DATABASE,
   });
-  const insertQuery = `insert into ${nation}_stock_full_prices (symbol, date, open, high, low, close) values (?, ?, ?, ?, ?, ?)`;
+  const insertQuery = `insert into ${nation}_stock_full_prices (symbol, date, open, high, low, close, volume) values (?, ?, ?, ?, ?, ?, ?)`;
 
   const stocksFile = `stocks/result/final/${symbolFileName}.json`;
 
@@ -239,16 +239,17 @@ const getPrices = async (symbolFileName, nation, startDate) => {
           connection.query(
             insertQuery,
             [
-              stock.symbol.slice(0, -3),
+              stock.symbol,
               price.date,
               price.open,
               price.high,
               price.low,
               price.close,
+              price.volume,
             ],
             (err, result) => {
               if (err) {
-                console.log(err);
+                console.log(`fail to save ${stock.symbol}`);
                 return reject(err);
               }
               resolve();
@@ -322,7 +323,7 @@ const getStockName = async (stock) => {
   return resp.data;
 };
 
-getPrices('us_stocks_symbols_2', 'us', '2014-01-01');
+getPrices('us_stocks_symbols_3', 'us', '2014-01-01');
 // getEconomicCalendar('2023-01-01', '2024-06-07');
 // getStockScores('us');
 // getDividendCalendar('2023-01-01', '2024-06-09');
