@@ -2,7 +2,9 @@ import mysql from 'mysql2';
 import dotenv from 'dotenv';
 import fs from 'fs';
 
+import { getFormattedDate } from './utils.js';
 import { updateClosePrice } from './batchClosePrice.js';
+import { updateDividendCalendar } from './batchDividendCalendar.js';
 
 const pool = mysql.createPool({
   connectionLimit: 150,
@@ -12,30 +14,28 @@ const pool = mysql.createPool({
   database: process.env.STOCK_DB_DATABASE,
 });
 
-const getFormattedDate = (date) => {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const day = String(date.getDate()).padStart(2, '0');
+const main = async () => {
+  try {
+    const today = new Date();
+    const oneWeekAgo = new Date(today);
+    oneWeekAgo.setDate(today.getDate() - 14);
 
-  return `${year}-${month}-${day}`;
+    const from = getFormattedDate(oneWeekAgo);
+    const to = getFormattedDate(today);
+
+    console.log(`batch date: ${from} ~ ${to}`);
+
+    await Promise.all([
+      // updateClosePrice('kr', from, to, pool),
+      // updateClosePrice('us', from, to, pool),
+      // updateDividendCalendar('kr', '2023-01-01', pool),
+      updateDividendCalendar('us', '2023-01-01', pool),
+    ]);
+  } catch (error) {
+    console.error('Error updating close prices:', error);
+  } finally {
+    pool.end();
+  }
 };
 
-try {
-  const today = new Date();
-  const oneWeekAgo = new Date(today);
-  oneWeekAgo.setDate(today.getDate() - 14);
-
-  const from = getFormattedDate(oneWeekAgo);
-  const to = getFormattedDate(today);
-
-  console.log(`batch date: ${from} ~ ${to}`);
-
-  await Promise.all([
-    // updateClosePrice('kr', from, to, pool),
-    updateClosePrice('us', from, to, pool),
-  ]);
-} catch (error) {
-  console.error('Error updating close prices:', error);
-} finally {
-  pool.end();
-}
+main();
